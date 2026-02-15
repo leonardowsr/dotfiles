@@ -80,6 +80,13 @@ fi
 cp "$SCRIPT_DIR/.zshrc" "$HOME/.zshrc"
 echo "  -> .zshrc copiado"
 
+# Copiar starship.toml
+if [ -f "$SCRIPT_DIR/starship.toml" ]; then
+  mkdir -p "$HOME/.config"
+  cp "$SCRIPT_DIR/starship.toml" "$HOME/.config/starship.toml"
+  echo "  -> starship.toml copiado"
+fi
+
 # --- 6. Definir Zsh como shell padrao ---
 echo "[6/7] Definindo Zsh como shell padrao..."
 if [ "$SHELL" != "$(which zsh)" ]; then

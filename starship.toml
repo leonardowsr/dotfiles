@@ -1,0 +1,68 @@
+format = """
+[](bg:#4f46e5 fg:#4f46e5)\
+$os\
+$directory\
+[](fg:#4f46e5 bg:#3b82f6)\
+$git_branch\
+$git_status\
+[](fg:#3b82f6 bg:#06b6d4)\
+$nodejs\
+$python\
+[](fg:#06b6d4 bg:#10b981)\
+$cmd_duration\
+[](fg:#10b981)\
+\n$character"""
+
+palette = "custom"
+
+[palettes.custom]
+indigo = "#4f46e5"
+blue = "#3b82f6"
+cyan = "#06b6d4"
+green = "#10b981"
+red = "#ef4444"
+slate = "#94a3b8"
+
+[os]
+disabled = false
+style = "bg:#4f46e5 fg:#e2e8f0"
+format = "[ $symbol]($style)"
+
+[os.symbols]
+Ubuntu = ""
+Windows = ""
+Linux = ""
+
+[directory]
+style = "bg:#4f46e5 fg:#e2e8f0 bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[git_branch]
+symbol = ""
+style = "bg:#3b82f6 fg:#e2e8f0"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#3b82f6 fg:#fbbf24"
+format = "[$all_status$ahead_behind]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#06b6d4 fg:#e2e8f0"
+format = "[ $symbol $version ]($style)"
+
+[python]
+symbol = ""
+style = "bg:#06b6d4 fg:#e2e8f0"
+format = "[ $symbol $version ]($style)"
+
+[cmd_duration]
+min_time = 500
+style = "bg:#10b981 fg:#e2e8f0"
+format = "[ 󰔟 $duration ]($style)"
+
+[character]
+success_symbol = "[❯](bold fg:#10b981)"
+error_symbol = "[❯](bold fg:#ef4444)"

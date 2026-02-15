@@ -284,6 +284,20 @@ killp() {
 # Recarregar zshrc
 alias reload="source ~/.zshrc"
 
+# Backup do zshrc + starship no GitHub
+dotbackup() {
+  cp ~/.zshrc ~/dotfiles/.zshrc
+  cp ~/.config/starship.toml ~/dotfiles/starship.toml 2>/dev/null
+  cd ~/dotfiles && git add -A && git commit -m "atualizar dotfiles" && git push
+  cd - >/dev/null
+  echo "Backup atualizado no GitHub!"
+}
+
+# NVM (Node Version Manager)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
 # --- Ferramentas modernas ---
 
 # eza (substitui ls)

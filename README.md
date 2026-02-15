@@ -7,6 +7,7 @@ Backup das minhas configuracoes de terminal (Zsh + Oh My Zsh) no WSL.
 | Arquivo | Descricao |
 |---------|-----------|
 | `.zshrc` | Configuracao completa do Zsh (plugins, aliases, funcoes, env vars) |
+| `starship.toml` | Tema powerline/agnoster do Starship |
 | `install.sh` | Script automatico que instala e restaura tudo |
 
 ## O que e instalado
