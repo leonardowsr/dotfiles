@@ -136,13 +136,14 @@ atualizar-hml() {
 
   echo "✅ homolog atualizada e você está de volta em develop!"
 }
-# Android SDK (Windows via WSL)
-export ANDROID_HOME=/mnt/c/Users/leona/AppData/Local/Android/Sdk
+# Android SDK (Linux nativo)
+export ANDROID_HOME="$HOME/Android/Sdk"
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 
-# Java (Windows JDK via WSL)
-export JAVA_HOME="/mnt/c/Program Files/Microsoft/jdk-17.0.17.10-hotspot"
+# Java (Linux nativo)
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 export PATH=$PATH:$JAVA_HOME/bin
 
 # --- Atalhos do trabalho ---
